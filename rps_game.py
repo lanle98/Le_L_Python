@@ -12,7 +12,7 @@ player = False
 
 # def win or lose function
 def winorlose(status):
-	print("Called win or lose function")
+	
 	print("************************")
 	print("You", status, "! Would you like to play again")
 	choice = input(" Y / N: ")
