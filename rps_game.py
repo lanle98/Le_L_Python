@@ -5,14 +5,44 @@ from random import randint
 #arrays are 0-based -> the first item s 0, the second is 1, etc
 choices = ["Rock","Paper","Scissors"]
 # make the computer choose a weapon from the choices array at random
-computer_choice = choices[randint(0,2)]
-
-#set lives for computer and player
 player_life = 3
 computer_life = 3
-
+computer_choice = choices[randint(0,2)]
 player = False
 
+# def win or lose function
+def winorlose(status):
+	print("Called win or lose function")
+	print("************************")
+	print("You", status, "! Would you like to play again")
+	choice = input(" Y / N: ")
+
+	#reset the lives
+	if choice == "Y" or choice =="y":
+		# change global variables
+		global player_life
+		global computer_life
+		global player
+		global computer
+
+
+
+
+
+	#set lives for computer and player
+		player_life = 3
+		computer_life = 3
+		computer_choice = choices[randint(0,2)]
+		player = False
+
+
+
+	elif choice == "N" or choice == "n":
+		print("You chose to quit!")
+		print("****************")
+		exit()
+
+		
 #set up our loop
 while player is False:
 # set player to True by making a selection
@@ -78,38 +108,16 @@ while player is False:
 
 #set to restart or to quit when game over (player loses)	
 	if player_life == 0:
-		print("===========================")
 		print("Your lives: ", player_life)
 		print("Computer lives: ", computer_life)
-		print("Game over man, you suck !!!")
-		player = input("restart or quit ??\n")
-		if player == "restart":
-			player_life = 3
-			computer_life = 3
-			player = False
-			computer_choice = choices[randint(0,2)]
-		if player == "quit":
-				exit()
-		else:
-			print("Check your spelling ...")
+		winorlose("lose")
 
 
 #set to restart or to quit when game over (computer loses)	
 	if computer_life == 0:
-		print("===========================")
 		print("Your lives: ", player_life)
 		print("Computer lives: ", computer_life)
-		print("You are awesome, you beat it")
-		player = input("restart or quit ??\n")
-		if player == "restart":
-				player_life = 3
-				computer_life = 3
-				player = False
-				computer_choice = choices[randint(0,2)]
-		if player == "quit":
-				exit()
-		else:
-			print("Check your spelling ...")
+		winorlose("lose")
 
 
 
