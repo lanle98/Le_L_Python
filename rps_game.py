@@ -16,7 +16,7 @@ player = False
 #set up our loop
 while player is False:
 # set player to True by making a selection
-	print()
+	print("===========================")
 	print("Your lives: ", player_life)
 	print("Computer lives: ", computer_life)
 	print("Choose your weapon !!!")
@@ -77,8 +77,8 @@ while player is False:
 	computer_choice = choices[randint(0,2)]
 
 #set to restart or to quit when game over (player loses)	
-	while player_life == 0:
-		print()
+	if player_life == 0:
+		print("===========================")
 		print("Your lives: ", player_life)
 		print("Computer lives: ", computer_life)
 		print("Game over man, you suck !!!")
@@ -88,7 +88,6 @@ while player is False:
 			computer_life = 3
 			player = False
 			computer_choice = choices[randint(0,2)]
-
 		if player == "quit":
 				exit()
 		else:
@@ -96,8 +95,8 @@ while player is False:
 
 
 #set to restart or to quit when game over (computer loses)	
-	while computer_life == 0:
-		print()
+	if computer_life == 0:
+		print("===========================")
 		print("Your lives: ", player_life)
 		print("Computer lives: ", computer_life)
 		print("You are awesome, you beat it")
