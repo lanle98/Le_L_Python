@@ -44,29 +44,29 @@ while player is False:
 #check to see if the computer choices beats our choices or not
 	elif player == "Rock":
 		if computer_choice == "Scissors":
-			computer_life -= 1
+			computer_life = computer_life - 1
 			print("You win !!!", player, "smashes" ,computer_choice)
 			
 		else:
-			player_life -= 1
+			player_life = player_life - 1
 			print("You lose !!!", computer_choice, "smashes" , player)
 			
 	elif player == "Scissors":
 		if computer_choice == "Paper":
-			computer_life -= 1
+			computer_life = computer_life - 1
 			print("You win !!!", player, "smashes" ,computer_choice)
 		else:
-			player_life -= 1
+			player_life = player_life - 1
 			print("You lose !!!", computer_choice, "smashes" , player)
 			
 
 	elif player == "Paper":
 		if computer_choice == "Rock":
-			computer_life -= 1
+			computer_life = computer_life - 1
 			print("You win !!!", player, "smashes" ,computer_choice)
 			
 		else:
-			player_life -= 1
+			player_life = player_life - 1
 			print("You lose !!!", computer_choice, "smashes" , player)
 	
 	else:
